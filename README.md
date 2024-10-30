@@ -1,4 +1,4 @@
-# Love-Letter-Website
+# Website-Ungkapan
 
 Welcome to the repository of a heartfelt and beautifully designed static love letter website. This project aims to provide a personal and intimate way to express affection and love through a digital medium.
 
@@ -36,13 +36,13 @@ To get a local copy up and running, follow these simple steps:
 1. Clone the repository to your local machine:
 
    ```sh
-   git clone https://github.com/qzydustin/Love-Letter-Website
+   git clone https://github.com/RifqiLA25/website-ungkapan.git
    ```
 
 2. Navigate to the project directory:
 
    ```sh
-   cd Love-Letter-Website
+   cd wbsite-ungkapan
    ```
 
 3. Open the `index.html` file in your browser to view the website.
