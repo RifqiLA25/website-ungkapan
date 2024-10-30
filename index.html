@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Letter</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="animation.js"></script>
+</head>
+
+<body>
+  <audio loop id="bgm">
+    <source src="kol.m4a" type="audio/mpeg" />
+  </audio>
+  <div id="main">
+    <div id="letter">
+      <p>
+        Selamat Ulang Tahun Ke-22 Tahun Sayangku 💖✨. Ternyata kita udah
+        jalan menuju 7 tahun lohh sayanggkuu💖. Gak kerasa banget kita udah
+        selama itu kita bakal sampe nikahkan hehe :) Aamiin gasieee.
+      </p>
+      <p>
+        Mungkin menuju ke mau 7 tahun ini kita gak semulus yang orang kira,
+        ada saat-saat kita hampir kandas, ada dimana kita berada di posisi gak
+        saling ngerti dengan lingkungan kita yang bisa nyebabin sulit
+        komunikasi, kecewaa, marah, sedihh, senang, dan masih banyak lagi yang
+        perlu kita jelajahi gasieee kita belum aquarium, ke dufan, ke pantai
+        lagi, intinya kita selalu Bersama okeii jangan ngerasa bosan sama
+        akuu. jangan ngerasa sendiri, jangan ngerasa gak ada orang yang bisa
+        diajak bersandar, ada akuu pasti ada akuu di hidup ayanggkuu.
+      </p>
+      <p>
+        Harapanku untuk kita ke depan adalah kita bisa terus bareng-bareng yah
+        sayangkuu. Aku ingin melihat lebih banyak senyuman di wajahmu, lebih
+        banyak momen indah yang kita buat bareng, dan semoga segala mimpi yang
+        kita rencanakan bisa terwujud satu per satu. Terima kasih 💖💖💖
+      </p>
+      <br />
+      <!-- Button to play video -->
+      <button id="video-button" onclick="playBirthdayVideo()">
+        Klik ini untuk lihat video ulang tahun
+      </button>
+
+      <!-- Hidden video element -->
+      <video id="birthdayVideo" style="display: none" controls>
+        <source src="Birthday.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div id="clock-box">
+        <div id="clock-text">Waktu Jadian</div>
+        <div id="clock"></div>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <hr id="horizontal-line" />
+  </div>
+  <input type="hidden" id="memorialDate" value="2024-05-01T00:00:00" />
+  <script src="app.js"></script>
+
+  <script>
+    function playBirthdayVideo() {
+      const video = document.getElementById("birthdayVideo");
+      const bgm = document.getElementById("bgm");
+
+      // Pause the background music
+      bgm.pause();
+
+      // Show and play the video
+      video.style.display = "block";
+      video.play();
+
+      // Request fullscreen
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) { // For Safari
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) { // For IE11
+        video.msRequestFullscreen();
+      }
+
+      // Event listener to detect when full screen mode is exited
+      document.addEventListener("fullscreenchange", handleFullscreenExit);
+      document.addEventListener("webkitfullscreenchange", handleFullscreenExit); // Safari
+      document.addEventListener("msfullscreenchange", handleFullscreenExit); // IE11
+
+      // Restart the background music after the video ends
+      video.onended = () => {
+        bgm.play();
+        hideVideo();
+      };
+    }
+
+    function handleFullscreenExit() {
+      const video = document.getElementById("birthdayVideo");
+      const bgm = document.getElementById("bgm");
+
+      // Check if full screen mode is exited
+      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+        // Hide the video and restart the background music
+        hideVideo();
+        bgm.play();
+      }
+    }
+
+    function hideVideo() {
+      const video = document.getElementById("birthdayVideo");
+      video.style.display = "none";
+      video.pause();
+      video.currentTime = 0; // Reset video to the beginning
+    }
+  </script>
+</body>
+</html>
