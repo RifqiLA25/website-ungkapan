@@ -1,6 +1,5 @@
 # Website-Ungkapan
 
-Welcome to the repository of a heartfelt and beautifully designed static love letter website. This project aims to provide a personal and intimate way to express affection and love through a digital medium.
 
 ## Demo
 
@@ -8,7 +7,6 @@ You can view a live demo of the website here:
 
 ## About the Project
 
-The love letter website is a simple yet elegant solution for conveying emotions to loved ones. It's built with modern web technologies to ensure a smooth and engaging user experience. The initial version of this project was inspired by an online source, which we have since been unable to locate for direct attribution. We honor and appreciate the work of the original creator. If you know the original author, please contact us so we can provide the proper acknowledgment.
 
 ### What's New
 
