@@ -4,7 +4,7 @@ Welcome to the repository of a heartfelt and beautifully designed static love le
 
 ## Demo
 
-You can view a live demo of the website here: [love.qzydustin.com](http://love.qzydustin.com)
+You can view a live demo of the website here: 
 
 ## About the Project
 
